@@ -2,9 +2,6 @@ spring:
   profiles:
       active: dev
 
-server:
-  context-path: recruit
-
 # datasource
   datasource:
       name: recruit
