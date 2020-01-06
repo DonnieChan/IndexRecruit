@@ -17,8 +17,8 @@ public interface ApplicationMapper {
     @Select("select * from application where resumeId = #{resumeId} and positionId = #{posId} limit 1")
     ApplicationEntity getApplication(@Param("resumeId") int resumeId, @Param("posId") int posId);
 
-    @Insert("insert into application(state,recentTime,resumeId,positionId) values (0,#{recentTime},#{resumeId},#{positionId})")
-    int saveApplication(@Param("recentTime") Timestamp recentTime, @Param("resumeId") int resumeId, @Param("positionId") int positionId);
+    @Insert("insert into application(state,recentTime,resumeId,positionId,hrId) values (0,#{recentTime},#{resumeId},#{positionId},#{hrId})")
+    int saveApplication(@Param("recentTime") Timestamp recentTime, @Param("resumeId") int resumeId, @Param("positionId") int positionId, @Param("hrId") int hrId);
 
     /**
      * 申请处理完成：查询返回 申请 职位 处理hr信息

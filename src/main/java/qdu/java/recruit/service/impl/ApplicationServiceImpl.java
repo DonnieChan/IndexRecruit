@@ -22,7 +22,7 @@ public class ApplicationServiceImpl implements ApplicationService {
         java.util.Date date = new java.util.Date();
         Timestamp recentTime = new Timestamp(date.getTime());
 
-        int result = applicationMapper.saveApplication(recentTime, resumeId, positionId);
+        int result = applicationMapper.saveApplication(recentTime, resumeId, positionId, 1);
         if (result > 0) {
             return true;
         }

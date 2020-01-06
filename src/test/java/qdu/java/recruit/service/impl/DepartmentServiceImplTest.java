@@ -21,7 +21,7 @@ public class DepartmentServiceImplTest {
     public void getDepartment() throws Exception {
 
         DepartmentEntity department = departmentService.getDepartment(1);
-        Assert.assertEquals("Develop",department.getDepartmentName());
+        Assert.assertEquals("技术部",department.getDepartmentName());
     }
 
 }
